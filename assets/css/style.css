@@ -10,6 +10,9 @@ body{
 
     color: var(--txt-color-dark);
 }
+img{
+    max-width: 100%;
+}
 
 :root{
     --app-header-height: 80px;
@@ -86,6 +89,9 @@ body{
     padding: .5rem;
 }
 
+.xxs-on{
+    display: none;
+}
 
 /* main */
 #top{
@@ -94,8 +100,16 @@ body{
 
     #sidebar{
         width: var(--sidebar-width);
-
         background-color: var(--bg-dark);
+        padding: .5rem;
+
+        .logo{
+            height: var(--app-header-height);
+            .xxs-off{
+                width: 70%;
+                padding-left: 1rem;
+            }
+        }
 
         @media (max-width: 600px){
             width: var(--sidebar-width-sm);
@@ -160,6 +174,7 @@ body{
         }
     }
 }
+
 #bottom{
     /* z-index: 1000; */
     #player{
@@ -183,8 +198,20 @@ body{
     }
 }
 
+/* xxs */
 @media screen and (max-width: 600px) {
     #top .app_body{
         width: calc(100% - var(--sidebar-width-sm));
+    }
+
+    .logo img.xxs-on{
+        
+    }
+
+    .xxs-on{
+        display: block;
+    }
+    .xxs-off{
+        display: none;
     }
 }
