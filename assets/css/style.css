@@ -10,28 +10,37 @@ body{
 }
 
 :root{
+    --app-header-height: 80px;
     --player-height: 80px;
     --sidebar-width: 250px;
+    --sidebar-width-sm: 50px;
 }
 
+/* #region debug */
 .debug *{
     border: 1px dotted black;
 }
 .debug body{
     background: beige;
 }
-.debug #app_main{
+.debug .app_body{
     background: rgba(209, 136, 0, 0.836);
+}
+.debug #app_main{
+    background: rgb(170, 190, 162);
+}
+.debug #app_header{
+    background: rgba(143, 143, 143, 0.966);
 }
 .debug #sidebar{
     background: rgba(163, 3, 3, 0.822);
 }
 .debug #player{
     background: green;
-    width: 100%;
 }
-.debug .container{
+.debug nav{
     background-color: aqua;
+    /* height: 30px; */
 }
 .debug .row{
     background-color: purple;
@@ -41,30 +50,66 @@ body{
 }
 .debug #upgrade{
     background: #000;
-    /* flex-grow: 1; */
-    width: calc(100% - var(--sidebar-width));
-    height: var(--player-height);
-    position: absolute;
-    top: 0;
-    right: 0;
+}
+/* #endregion debug */
+
+
+/* utilities */
+.container{
+    width: 90%;
+    margin: auto;
 }
 
+
+/* main */
 #top{
     height: calc(100% - var(--player-height));
     display: flex;
 
-    position: relative;
     #sidebar{
         width: var(--sidebar-width);
-        @media (max-width: 600px){
 
+        @media (max-width: 600px){
+            width: var(--sidebar-width-sm);
         }
+
+        /* animation */
+        transition: 250ms;
     }
-    #app_main{
+    .app_body{
         flex-grow: 1;
+        #app_header{
+            height: var(--app-header-height);
+        }
+        #app_main{
+            height: calc(100% - var(--app-header-height));
+            overflow-y: scroll;
+            nav 
+            {
+                text-transform: uppercase;
+                padding: 1rem 2rem;
+                ul{
+                    list-style: none;
+                    
+                    display: flex;
+                    flex-wrap: wrap;
+                    justify-content: space-around;
+
+                    li{
+                        padding: .2rem .5rem;
+                        margin: 0 .5rem
+                    }
+                }
+
+                @media(max-width: 600px){
+                    padding: .5rem;
+                }
+            }
+        }
     }
 }
 #bottom{
+    /* z-index: 1000; */
     #player{
         height: var(--player-height);
     }
