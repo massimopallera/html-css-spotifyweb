@@ -9,3 +9,37 @@ body{
     overflow: hidden;
 }
 
+:root{
+    --player-height: 80px;
+    --sidebar-width: 250px;
+}
+
+.debug{
+    border: 1px dotted;
+}
+.debug body{
+    background: beige;
+}
+.debug #sidebar{
+    background: orange;
+}
+.debug #app_main{
+    background: blue;
+}
+.debug #sidebar{
+    background: rgba(163, 3, 3, 0.822);
+}
+.debug #player{
+    background: green;
+}
+
+#top{
+    height: calc(100% - var(--player-height));
+    display: flex;
+    #sidebar{
+        width: var(--sidebar-width);
+    }
+    #app_main{
+        flex-grow: 1;
+    }
+}
