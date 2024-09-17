@@ -95,33 +95,41 @@ img{
 
 
 .sidebar-nav{
+    
+    /* to create some margin between list items, keeping the first item in line with the app_header */
     ul li:not(:first-child){
         margin-top: .75rem;
     }
+    
     .sidebar-nav-item{
+
         display: flex;
         align-items: center;
-        padding-left:  1rem;
+        padding-left: 1rem;
 
-        @media (max-width:600px) {
-            padding: 0;
-            justify-content: center;
-        }
-    
-        border-left: 4px solid transparent;
-        /* margin: .75rem 0; */
-    
+        /* added a border to keep all list items centered */
+        border-left: 4px solid transparent;    
+
         img{
             width: 30px;
         }
         span{
-            /* font-size: 1rem; */
             padding-left: .5rem;
-            
         }
+
+        /* the item selected has the border colored in green */
         &.active{
-            border-color: #adff2f;
-        }    
+            border-color: var(--selected-line-color);
+        }   
+
+        /* when screen is less than 600px, remove the padding and center the elements */
+        @media (max-width:600px) {
+            padding: 0;
+            justify-content: center;
+        }
+
+        /* animation */
+        transition: 800ms; 
     }
 }
 
@@ -140,12 +148,10 @@ img{
 
     @media (max-width: 600px){
         width: var(--sidebar-width-sm);
-        /* & :not(.logo){ */
-            transition: 400ms;
-        /* } */
     }
-
+    
     /* animation */
+    transition: 400ms;
     transition-delay: 0ms;
 }
 
