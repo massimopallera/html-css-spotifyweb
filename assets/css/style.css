@@ -108,9 +108,16 @@ body{
 
     .app_body{
         width: calc(100% - var(--sidebar-width));
+        overflow-y: scroll;
+
+        background-color: var(--bg-body);
 
         #app_header{
             height: var(--app-header-height);
+
+            position: sticky;
+            top: 0;
+            right: 0;
 
             background-color: var(--bg-dark);
             opacity: 0.7;
@@ -118,9 +125,7 @@ body{
         
         #app_main{
             height: calc(100% - var(--app-header-height));
-            overflow-y: scroll;
-
-            background-color: var(--bg-body);
+            /* height: calc(100%); */
             
             /* start navabar */
             nav 
@@ -136,7 +141,7 @@ body{
                     
                     display: flex;
                     flex-wrap: wrap;
-                    justify-content: space-around;
+                    justify-content: center;
 
                     li{
                         padding: .2rem .5rem;
