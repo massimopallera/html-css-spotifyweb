@@ -14,32 +14,59 @@ body{
     --sidebar-width: 250px;
 }
 
-.debug{
-    border: 1px dotted;
+.debug *{
+    border: 1px dotted black;
 }
 .debug body{
     background: beige;
 }
-.debug #sidebar{
-    background: orange;
-}
 .debug #app_main{
-    background: blue;
+    background: rgba(209, 136, 0, 0.836);
 }
 .debug #sidebar{
     background: rgba(163, 3, 3, 0.822);
 }
 .debug #player{
     background: green;
+    width: 100%;
+}
+.debug .container{
+    background-color: aqua;
+}
+.debug .row{
+    background-color: purple;
+}
+.debug .card{
+    background: grey;
+}
+.debug #upgrade{
+    background: #000;
+    /* flex-grow: 1; */
+    width: calc(100% - var(--sidebar-width));
+    height: var(--player-height);
+    position: absolute;
+    top: 0;
+    right: 0;
 }
 
 #top{
     height: calc(100% - var(--player-height));
     display: flex;
+
+    position: relative;
     #sidebar{
         width: var(--sidebar-width);
+        @media (max-width: 600px){
+
+        }
     }
     #app_main{
         flex-grow: 1;
     }
+}
+#bottom{
+    #player{
+        height: var(--player-height);
+    }
+
 }
