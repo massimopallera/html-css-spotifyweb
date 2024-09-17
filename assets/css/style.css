@@ -92,64 +92,101 @@ img{
 .xxs-on{
     display: none;
 }
-
-
-.sidebar-nav{
-    
-    /* to create some margin between list items, keeping the first item in line with the app_header */
-    ul li:not(:first-child){
-        margin-top: .75rem;
-    }
-    
-    .sidebar-nav-item{
-
-        display: flex;
-        align-items: center;
-        padding-left: 1rem;
-
-        /* added a border to keep all list items centered */
-        border-left: 4px solid transparent;    
-
-        img{
-            width: 30px;
-        }
-        span{
-            padding-left: .5rem;
-        }
-
-        /* the item selected has the border colored in green */
-        &.active{
-            border-color: var(--selected-line-color);
-        }   
-
-        /* when screen is less than 600px, remove the padding and center the elements */
-        @media (max-width:600px) {
-            padding: 0;
-            justify-content: center;
-        }
-
-        /* animation */
-        transition: 800ms; 
-    }
+.uppercase{
+    text-transform: uppercase;
 }
+
+
 
 #sidebar{
     width: var(--sidebar-width);
     background-color: var(--bg-dark);
     padding-top: .5rem;
 
+    @media (max-width: 600px){
+            width: var(--sidebar-width-sm);
+    }
+
     .logo{
         height: var(--app-header-height);
         .xxs-off{
             width: 70%;
-            padding: 0 .5rem;
+            padding-left: 1rem;
+            padding-top: .5rem;
         }
     }
 
-    @media (max-width: 600px){
-        width: var(--sidebar-width-sm);
+    /* navbar */
+    .sidebar-nav{
+     
+        /* to create some margin between list items, keeping the first item in line with the app_header */
+        ul li:not(:first-child){
+            margin-top: .75rem;
+        }
+        ul{
+            list-style: none;
+        }
+        .sidebar-nav-item{
+
+            display: flex;
+            align-items: center;
+            padding-left: 1rem;
+
+            /* added a border to keep all list items centered */
+            border-left: 4px solid transparent;    
+
+            img{
+                width: 30px;
+            }
+            span{
+                padding-left: .5rem;
+            }
+
+            /* the item selected has the border colored in green */
+            &.active{
+                border-color: var(--selected-line-color);
+            }   
+
+            /* when screen is less than 600px, remove the padding and center the elements */
+            @media (max-width:600px) {
+                padding: 0;
+                justify-content: center;
+            }
+
+            /* animation */
+            transition: 800ms; 
+        }
     }
-    
+    /* playlist */
+    .playlist{
+
+        /* overflow-y: scroll; */
+
+        padding-left: 1rem;
+        margin-top: 2rem;
+
+        @media (max-width: 600px){
+            display: none;
+        }
+
+        ul{
+            list-style: none;
+        }
+
+        .title{
+            color: white;
+        }
+
+        .create-pl{
+            margin: 1rem 0;
+        }
+
+        .pl-name{
+            line-height: 2.5rem;
+        }
+
+    }
+
     /* animation */
     transition: 400ms;
     transition-delay: 0ms;
@@ -185,7 +222,6 @@ img{
             /* start navabar */
             nav 
             {
-                text-transform: uppercase;
                 padding: 1rem 2rem;
                 ul{
                     /* width: 90%; */
