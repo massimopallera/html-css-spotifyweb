@@ -93,18 +93,35 @@ img{
     display: none;
 }
 
-.sample{
-    display: flex;
-    align-items: center;
-    padding-left: 1rem;
 
-    border-left: 4px solid #adff2f;
-
-    img{
-        width: 30px;
+.sidebar-nav{
+    ul li:not(:first-child){
+        margin-top: .75rem;
     }
-    span{
-        font-size: 1.3rem;
+    .sidebar-nav-item{
+        display: flex;
+        align-items: center;
+        padding-left:  1rem;
+
+        @media (max-width:600px) {
+            padding: 0;
+            justify-content: center;
+        }
+    
+        border-left: 4px solid transparent;
+        /* margin: .75rem 0; */
+    
+        img{
+            width: 30px;
+        }
+        span{
+            /* font-size: 1rem; */
+            padding-left: .5rem;
+            
+        }
+        &.active{
+            border-color: #adff2f;
+        }    
     }
 }
 
@@ -117,16 +134,18 @@ img{
         height: var(--app-header-height);
         .xxs-off{
             width: 70%;
-            padding-left: 1rem;
+            padding: 0 .5rem;
         }
     }
 
     @media (max-width: 600px){
         width: var(--sidebar-width-sm);
+        /* & :not(.logo){ */
+            transition: 400ms;
+        /* } */
     }
 
     /* animation */
-    transition: 400ms;
     transition-delay: 0ms;
 }
 
@@ -221,7 +240,8 @@ img{
     }
 
     .logo img.xxs-on{
-        
+        width: 30px;
+        margin: .5rem auto;
     }
 
     .xxs-on{
