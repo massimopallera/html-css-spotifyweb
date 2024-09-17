@@ -93,32 +93,48 @@ img{
     display: none;
 }
 
+.sample{
+    display: flex;
+    align-items: center;
+    padding-left: 1rem;
+
+    border-left: 4px solid #adff2f;
+
+    img{
+        width: 30px;
+    }
+    span{
+        font-size: 1.3rem;
+    }
+}
+
+#sidebar{
+    width: var(--sidebar-width);
+    background-color: var(--bg-dark);
+    padding-top: .5rem;
+
+    .logo{
+        height: var(--app-header-height);
+        .xxs-off{
+            width: 70%;
+            padding-left: 1rem;
+        }
+    }
+
+    @media (max-width: 600px){
+        width: var(--sidebar-width-sm);
+    }
+
+    /* animation */
+    transition: 400ms;
+    transition-delay: 0ms;
+}
+
 /* main */
 #top{
     height: calc(100% - var(--player-height));
     display: flex;
 
-    #sidebar{
-        width: var(--sidebar-width);
-        background-color: var(--bg-dark);
-        padding: .5rem;
-
-        .logo{
-            height: var(--app-header-height);
-            .xxs-off{
-                width: 70%;
-                padding-left: 1rem;
-            }
-        }
-
-        @media (max-width: 600px){
-            width: var(--sidebar-width-sm);
-        }
-
-        /* animation */
-        transition: 400ms;
-        transition-delay: 0ms;
-    }
 
     .app_body{
         width: calc(100% - var(--sidebar-width));
