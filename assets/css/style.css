@@ -85,6 +85,17 @@ img{
     width: calc((100% / 12) *2);
 }
 
+.txt-light{
+    color: var(--txt-color-light);
+}
+.txt-dark{
+    color: var(--txt-color-dark);
+}
+
+.txt-d-none{
+    text-decoration: none;
+}
+
 .p-5{
     padding: .5rem;
 }
@@ -94,6 +105,11 @@ img{
 }
 .uppercase{
     text-transform: uppercase;
+}
+button{
+    background: transparent;
+    border: 0;
+    /* color: var(--txt-color-dark); */
 }
 
 
@@ -173,16 +189,24 @@ img{
             list-style: none;
         }
 
-        .title{
+        /* .title{
             color: white;
-        }
+        } */
 
         .create-pl{
             margin: 1rem 0;
+            > i{
+                font-size: 2rem;
+                vertical-align: middle;
+            }
+            > span{
+                padding-left: .5rem;
+            }
         }
 
         .pl-name{
             line-height: 2.5rem;
+            
         }
 
     }
@@ -201,6 +225,9 @@ img{
     .app_body{
         width: calc(100% - var(--sidebar-width));
         overflow-y: scroll;
+
+        /* to fix -- app-main shows an horizontal scrollbar  */
+        overflow-x: hidden;
 
         background-color: var(--bg-body);
 
@@ -236,11 +263,20 @@ img{
 
                     li{
                         padding: .2rem .5rem;
-                        margin: 0 .5rem
-                    }
-                }
+                        margin: 0 .5rem;
 
-                @media(max-width: 600px){
+                        button{
+                            /* font-size:large; */
+                            &.active{
+                                /* to fix */
+                                padding-bottom: .3rem;
+                                border-bottom: 2px solid var(--selected-line-color);
+                            }
+                        }
+                    }
+            }
+            
+            @media(max-width: 600px){
                     padding: .5rem;
                 }
             }
@@ -253,8 +289,11 @@ img{
 }
 
 #bottom{
-    /* z-index: 1000; */
     #player{
+        position: sticky;
+        bottom: 0;
+        left: 0;
+
         background-color: var(--bg-player);
 
         height: var(--player-height);

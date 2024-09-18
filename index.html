@@ -5,6 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Spotify Web</title>
 
+    <!-- font awesome link -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
     <link rel="stylesheet" href="./assets/css/style.css">
 </head>
 <body class="">
@@ -14,29 +17,37 @@
         <div id="sidebar">
             <!-- logo -->
              <div class="logo px-l-5">
-                 <img src="./assets/img/logo.svg" alt="" class="xxs-off">
-                 <img src="./assets/img/logo-small.svg" alt="" class="xxs-on">
+                <a href="">
+                    <img src="./assets/img/logo.svg" alt="" class="xxs-off">
+                    <img src="./assets/img/logo-small.svg" alt="" class="xxs-on">
+                </a>
              </div>
             <!-- side-bar nav -->             
             <nav class="sidebar-nav">
                 <ul>
                     <li>
-                        <span class="sidebar-nav-item active">
-                            <img src="./assets/img/home.svg" alt="">
-                            <span class="xxs-off">Home</span>
-                        </span>
+                        <a class="txt-light txt-d-none" href="">
+                            <span class="sidebar-nav-item active">
+                                <img src="./assets/img/home.svg" alt="">
+                                <span class="xxs-off">Home</span>
+                            </span>
+                        </a>
                     </li>
                     <li>
-                        <span class="sidebar-nav-item">
-                            <img src="./assets/img/search.svg" alt="">
-                            <span class="xxs-off">Cerca</span>
-                        </span>
+                        <a class="txt-dark txt-d-none" href="">
+                            <span class="sidebar-nav-item">
+                                <img src="./assets/img/search.svg" alt="">
+                                <span class="xxs-off">Cerca</span>
+                            </span>
+                        </a>
                     </li>
                     <li>
-                        <span class="sidebar-nav-item">
-                            <img src="./assets/img/libreria.svg" alt="">
-                            <span class="xxs-off">La tua libreria</span>
-                        </span>
+                        <a class="txt-dark txt-d-none" href="">
+                            <span class="sidebar-nav-item">
+                                <img src="./assets/img/libreria.svg" alt="">
+                                <span class="xxs-off">La tua libreria</span>
+                            </span>
+                        </a>
                     </li>
                     
                 </ul>
@@ -47,14 +58,48 @@
                  <div class="title uppercase">Playlist</div>
                 <!-- create playlist -->
                  <div class="create-pl">
-                    <img src="" alt="creapl">
+                    <!-- <img src="" alt="creapl"> -->
+                    <i class="fa-solid fa-square-plus" style="color: #fff;"></i>
                     <span>Crea Playlist</span>
                  </div>
                 <!-- playlist name -->
                  <div class="pl-name">
                     <ul>
-                        <li>Nome Playlist</li>
-                        <li>Nome Playlist</li>
+                        <li>
+                            <button class="txt-dark">
+                                Nome Playlist
+                            </button>
+                        </li>
+                        <li>
+                            <button class="txt-dark">
+                                Nome Playlist
+                            </button>
+                        </li>
+                        <li>
+                            <button class="txt-dark">
+                                Nome Playlist
+                            </button>
+                        </li>
+                        <li>
+                            <button class="txt-dark">
+                                Nome Playlist
+                            </button>
+                        </li>
+                        <li>
+                            <button class="txt-dark">
+                                Nome Playlist
+                            </button>
+                        </li>
+                        <li>
+                            <button class="txt-dark">
+                                Nome Playlist
+                            </button>
+                        </li>
+                        <li>
+                            <button class="txt-dark">
+                                Nome Playlist
+                            </button>
+                        </li>
                     </ul>
                  </div>
              </div>
@@ -69,13 +114,37 @@
             <div id="app_main">
                 <!-- start app navbar -->
                 <nav>
-                    <ul class="uppercase">
-                        <li>Lorem.</li>
-                        <li>Molestias.</li>
-                        <li>Odio!</li>
-                        <li>At.</li>
-                        <li>Facilis!</li>
-                        <li>Qui!</li>
+                    <ul>
+                        <li>
+                            <button class="txt-dark uppercase active">
+                                in evidenza
+                            </button>
+                        </li>
+                        <li>
+                            <button class="txt-dark uppercase">
+                                podcast
+                            </button>
+                        </li>
+                        <li>
+                            <button class="txt-dark uppercase">
+                                classifiche
+                            </button>
+                        </li>
+                        <li>
+                            <button class="txt-dark uppercase">
+                                generi e mood
+                            </button>
+                        </li>
+                        <li>
+                            <button class="txt-dark uppercase">
+                                nuove uscite
+                            </button>
+                        </li>
+                        <li>
+                            <button class="txt-dark uppercase">
+                                scopri
+                            </button>
+                        </li>
                     </ul>
                 </nav>
                 <!-- end app navbar -->
