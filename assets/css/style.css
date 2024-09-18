@@ -117,6 +117,9 @@ img{
 .xxs-on{
     display: none;
 }
+/* .xs-off{
+    display: block;
+} */
 .uppercase{
     text-transform: uppercase;
 }
@@ -424,7 +427,7 @@ button{
                 margin-right: 1rem;
             }
         }
-        }
+        
     }
 
 }
@@ -439,6 +442,10 @@ button{
 @media screen and (max-width: 700px) {
     .col-6-xs{
         width: 50%;
+    }
+
+    #bottom #player .right .xs-off{
+        display: none;
     }
 }
 
