@@ -20,6 +20,7 @@
         left: 0;
     }
     .play{
+        display: none;
         font-size: 3rem;
         position: absolute;
         top: 50%;
@@ -27,8 +28,13 @@
         transform: translate(-50%,-50%);
         color: white;
     }
-    .img-container-hover:hover .dark{
-        cursor: pointer;
-        display: block;
+    .img-container-hover:hover {
+        .dark{    
+            cursor: pointer;
+        }
+        .dark, .play{
+            display: block;
+        }
     }
 }
+

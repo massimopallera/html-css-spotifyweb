@@ -117,6 +117,12 @@ img{
 .mt-2{
     margin-top: 2rem;
 }
+.mb-1{
+    margin-bottom: 1rem;
+}
+.rounded > *{
+    border-radius: 50%;
+}
 
 .xxs-on{
     display: none;
@@ -258,9 +264,10 @@ button{
             position: sticky;
             top: 0;
             right: 0;
+            z-index: 1000;
 
             background-color: var(--bg-dark);
-            opacity: 0.7;
+            opacity: 0.9;
 
             padding: 0 .5rem;
 
@@ -277,6 +284,7 @@ button{
         }
         
         #app_main{
+            z-index: 0;
             height: calc(100% - var(--app-header-height));
             /* height: calc(100%); */
             
