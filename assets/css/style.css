@@ -114,6 +114,10 @@ img{
     padding: .5rem;
 }
 
+.mt-2{
+    margin-top: 2rem;
+}
+
 .xxs-on{
     display: none;
 }
@@ -315,7 +319,6 @@ button{
                 }
             }
             /* end navbar */
-
             .card{
                 text-align: center;
                 .played-title{
