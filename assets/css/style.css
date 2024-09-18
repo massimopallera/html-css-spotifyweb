@@ -350,6 +350,9 @@ button{
                 font-size: 1rem;
 
                 padding-right: 3rem;
+                @media (max-width:900px) {
+                    padding: 0;
+                }
             }
             .author{
                 font-size: .8rem;
@@ -367,9 +370,10 @@ button{
                 /* to fix */
                 @media (max-width:900px) {
                     flex-direction: column;
+                    margin-left: .5rem;
                     i{
-                        /* padding: 0; */
                         margin: .3rem 0 ;
+                        /* padding: 0; */
                     }
                     
                 }
@@ -385,6 +389,9 @@ button{
                 i{
                     padding: 0 1rem;
                     /* font-size: larger; */
+                    @media (max-width:900px) {
+                        padding: 0 .3rem;
+                    }
                 }
                 .play{
                     vertical-align: middle;
@@ -407,19 +414,19 @@ button{
 
                 .full-bar{
                     background: var(--txt-color-dark);
-                    height: 3px;
+                    height: 4px;
                     width: 70%;
                     margin: 0 1rem;
                 }
 
-            }
-            /* @media (max-width:900px) {
-                flex-grow: 2;
-
-                .full-bar{
-                    width: 40%;
+                .full-bar, .small-bar{
+                    border-radius: 2rem;
                 }
-            } */
+
+                span{
+                    font-size: .7rem;
+                }
+            }
         }
 
         .right{
