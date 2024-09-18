@@ -338,23 +338,19 @@ button{
             align-items: center;
             justify-content: space-between;
 
-            
             .img-container{
                 width: 50px;
 
             }
-
             .song-name{
                 font-weight: 900;
                 font-size: 1rem;
 
                 padding-right: 3rem;
             }
-
             .author{
                 font-size: .8rem;
             }
-
             .icons-container{
                 flex-wrap: wrap;
 
@@ -364,6 +360,70 @@ button{
                     padding: 0 .5rem;
                 }
             }
+        }
+
+        .center{
+            padding: 1rem 0;
+            text-align: center;
+            width: 33%;
+
+            .center-top{
+                i{
+                    padding: 0 1rem;
+                    /* font-size: larger; */
+                }
+                .play{
+                    vertical-align: middle;
+                    font-size: 2rem;
+                }
+            }
+
+            .center-bottom{
+                margin-top: .5rem;
+                display: flex;
+                align-items: center;
+                /* gap: 1rem; */
+                /* justify-content: space-between; */
+
+                .small-bar{
+                    background: var(--txt-color-light);
+                    width: 30%;
+                    height: 100%;
+                }
+
+                .full-bar{
+                    background: var(--txt-color-dark);
+                    height: 3px;
+                    width: 100%;
+                    margin: 0 1rem;
+                }
+            }
+        }
+
+        .right{
+            padding: 1rem .5rem;
+
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            color: var(--txt-color-light);
+
+            i{
+                padding: 0 .5rem;
+            }
+            .small-bar{
+                background: var(--txt-color-light);
+                width: 20%;
+                height: 100%;
+            }
+
+            .full-bar{
+                background: var(--txt-color-dark);
+                height: 3px;
+                width: 90px;
+                margin-right: 1rem;
+            }
+        }
         }
     }
 
