@@ -64,6 +64,20 @@ img{
 .debug #upgrade{
     background: #000;
 }
+
+
+.debug #player{
+    /* background: white; */
+    .right{
+        background: rgb(221, 45, 45);
+    }
+    .left{
+        background-color: aqua;
+    }
+    .center{
+        background: beige;
+    }
+}
 /* #endregion debug */
 
 
@@ -247,7 +261,6 @@ button{
             text-align: end;
 
             #upgrade{
-                /* background: white; */
                 button{
                     border: 2px solid var(--txt-color-light);
                     padding: .8rem 1rem ;
@@ -305,13 +318,46 @@ button{
 
 #bottom{
     #player{
+        background-color: var(--bg-player);
+        height: var(--player-height);
+        width: 100%;
+
         position: sticky;
         bottom: 0;
         left: 0;
 
-        background-color: var(--bg-player);
+        display: flex;
+        justify-content: space-between;
 
-        height: var(--player-height);
+        .center{
+            flex-grow: 2;
+        }
+
+        .left, 
+        .right{
+            flex-grow: 1;
+        }
+
+        .left{
+            display: flex;
+            padding: 1rem .5rem;
+
+            align-items: center;
+            
+            .img-container{
+                width: 50px;
+
+            }
+
+            .song-name{
+                font-weight: 900;
+                font-size: 1rem;
+            }
+
+            .author{
+                font-size: .8rem;
+            }
+        }
     }
 
 }
