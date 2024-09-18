@@ -120,7 +120,7 @@ img{
 .mb-1{
     margin-bottom: 1rem;
 }
-.rounded > *{
+.rounded{
     border-radius: 50%;
 }
 
@@ -145,6 +145,7 @@ button{
     width: var(--sidebar-width);
     background-color: var(--bg-dark);
     padding-top: .5rem;
+    position: relative;
 
     @media (max-width: 600px){
             width: var(--sidebar-width-sm);
@@ -216,9 +217,10 @@ button{
             list-style: none;
         }
 
-        /* .title{
-            color: white;
-        } */
+        .title{
+            color: var(--txt-color-light);
+            font-weight: 900;
+        }
 
         .create-pl{
             margin: 1rem 0;
@@ -236,6 +238,48 @@ button{
             
         }
 
+    }
+
+
+    /* account */
+    .side-bottom{
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        padding: 0 1.25rem .5rem;
+
+    }
+    .download, .account{
+        display: flex;
+        justify-content: left;
+        align-items: center;
+    }
+    .download{
+        
+        margin-left: .5rem;
+        margin-bottom: .5rem;
+        div{
+            margin-left: .5rem;
+        }
+    }
+    .account{
+        margin-top: .5rem;
+        img{
+            padding: .3rem;
+            width: 40px;
+            aspect-ratio: 1;
+            background: var(--bg-player);
+        }
+        .account-name{
+            margin-left: .5rem;
+            color: white;
+            font-weight: 900
+        }
+    }
+    hr{
+        width: 100%;
+        margin: auto;
+        border: 1px solid var(--txt-color-dark);
     }
 
     /* animation */
@@ -341,6 +385,9 @@ button{
 
 
 #bottom{
+    .full-bar, .small-bar{
+        border-radius: 2rem;
+    }
     #player{
         background-color: var(--bg-player);
         height: var(--player-height);
@@ -439,10 +486,6 @@ button{
                     margin: 0 1rem;
                 }
 
-                .full-bar, .small-bar{
-                    border-radius: 2rem;
-                }
-
                 span{
                     font-size: .7rem;
                 }
@@ -468,9 +511,10 @@ button{
 
             .full-bar{
                 background: var(--txt-color-dark);
-                height: 3px;
+                height: 4px;
                 width: 90px;
                 margin-right: 1rem;
+                
             }
         }
         

@@ -60,11 +60,11 @@
             <!-- playlists -->
              <div class="playlist">
                 <!-- title -->
-                 <div class="title uppercase">Playlist</div>
+                 <div class="title uppercase txt-light">Playlist</div>
                 <!-- create playlist -->
-                 <div class="create-pl">
+                 <div class="create-pl ">
                     <!-- <img src="" alt="creapl"> -->
-                    <i class="fa-solid fa-square-plus" style="color: #fff;"></i>
+                    <i class="fa-solid fa-square-plus" ></i>
                     <span>Crea Playlist</span>
                  </div>
                 <!-- playlist name -->
@@ -110,11 +110,17 @@
              </div>
 
              <!-- account -->
-              <div class="account">
-                  
-                  <hr>
-                  
+              <div class="side-bottom">
 
+                <div class="download">
+                    <i class="fa-regular fa-circle-down"></i>
+                    <div>Installa app</div>
+                </div>
+                <hr>
+                <div class="account">
+                    <img class="rounded" src="./assets/img/profile.svg" alt="">
+                    <div class="account-name">John Doe</div>
+                </div>
               </div>
         </div>
 
@@ -290,9 +296,9 @@
                     <div class="row p-1">
                         <div class="col-2 col-3-sm col-6-xs">
                             <div class="card p-5">
-                                <div class="img-container-hover rounded">
-                                    <img class="played-img" src="./assets/img/youg.jpeg" alt="">
-                                    <div class="dark">
+                                <div class="img-container-hover ">
+                                    <img class="played-img rounded" src="./assets/img/youg.jpeg" alt="">
+                                    <div class="dark rounded">
                                         <i class="fa-regular fa-play-circle play"></i>
                                     </div>                                
                                 </div>
@@ -303,9 +309,9 @@
 
                         <div class="col-2 col-3-sm col-6-xs">
                             <div class="card p-5">
-                                <div class="img-container-hover rounded">
-                                    <img class="played-img " src="./assets/img/einaudi.jpeg" alt="">
-                                    <div class="dark">
+                                <div class="img-container-hover ">
+                                    <img class="played-img  rounded" src="./assets/img/einaudi.jpeg" alt="">
+                                    <div class="dark rounded">
                                         <i class="fa-regular fa-play-circle play"></i>
                                     </div>
                                 </div>
@@ -350,26 +356,28 @@
 
             <!-- center -->
             <div class="center">
-                <div class="center-top">
+                <div class="center-top ">
                     <!-- shuffle -->
-                    <i class="fa-solid fa-shuffle"></i>
+                    <i class="fa-solid fa-shuffle txt-light"></i>
                     <!-- previous -->
-                    <i class="fa-solid fa-backward-step"></i>
+                    <i class="fa-solid fa-backward-step txt-light"></i>
                     <!-- play -->
-                    <i class="fa-regular fa-play-circle play"></i>
+                    <i class="fa-regular fa-play-circle play txt-light"></i>
                     <!-- next -->
-                    <i class="fa-solid fa-forward-step"></i>
+                    <i class="fa-solid fa-forward-step txt-light"></i>
                     <!-- repeat -->
-                    <i class="fa-solid fa-repeat"></i>
+                    <i class="fa-solid fa-repeat txt-light"></i>
                 </div>
 
                 <!-- progress bar + times -->
                 <div class="center-bottom">
-                    <span>0:25</span>
+                    <span class="txt-light">0:25</span>
                     <div class="full-bar">
-                        <div class="small-bar"></div>
+                        <div class="small-bar">
+                            <i class="fa-solid fa-circle"></i>
+                        </div>
                     </div>
-                    <span>3:26</span>
+                    <span class="txt-light">3:26</span>
                 </div>
             </div>
 
@@ -383,7 +391,9 @@
                 <i class="fa-solid fa-volume-low"></i>
 
                 <div class="full-bar xs-off">
-                    <div class="small-bar xs-off"></div>
+                    <div class="small-bar xs-off">
+                        <i class="fa-solid fa-circle xs-off"></i>
+                    </div>
                 </div>
             </div>
         </div>

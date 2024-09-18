@@ -38,3 +38,39 @@
     }
 }
 
+button:hover,
+.create-pl:hover *,
+.download:hover div,
+.sidebar-nav a:hover,
+#bottom i:hover{
+    color: var(--txt-color-light);
+    cursor: pointer;
+}
+
+#upgrade button:hover{
+    /* zoom: 1.1; */
+    transform: scale(1.04);
+    transition-duration: 700ms;
+}
+
+#bottom i.play:hover{
+    transform: scale(1.1);
+    transition-duration: 300ms;
+}
+
+.small-bar{
+    position: relative;
+}
+
+.fa-circle{
+    position: absolute;
+    right: 0;
+    top: 0;
+    transform: translate(50%,-25%);
+    display: none;
+}
+.full-bar:hover{
+    .fa-circle{
+        display: block;
+    }
+}
