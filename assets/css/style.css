@@ -316,6 +316,7 @@ button{
     }
 }
 
+
 #bottom{
     #player{
         background-color: var(--bg-player);
@@ -329,20 +330,14 @@ button{
         display: flex;
         justify-content: space-between;
 
-        .center{
-            flex-grow: 2;
-        }
-
-        .left, 
-        .right{
-            flex-grow: 1;
-        }
 
         .left{
-            display: flex;
             padding: 1rem .5rem;
 
+            display: flex;
             align-items: center;
+            justify-content: space-between;
+
             
             .img-container{
                 width: 50px;
@@ -352,10 +347,22 @@ button{
             .song-name{
                 font-weight: 900;
                 font-size: 1rem;
+
+                padding-right: 3rem;
             }
 
             .author{
                 font-size: .8rem;
+            }
+
+            .icons-container{
+                flex-wrap: wrap;
+
+                font-size: 1.2rem;
+                margin-left: 1rem;
+                i{
+                    padding: 0 .5rem;
+                }
             }
         }
     }
