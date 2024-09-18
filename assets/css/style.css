@@ -355,12 +355,23 @@ button{
                 font-size: .8rem;
             }
             .icons-container{
-                flex-wrap: wrap;
+                display: flex;
+                /* flex-wrap: wrap; */
 
                 font-size: 1.2rem;
                 margin-left: 1rem;
                 i{
                     padding: 0 .5rem;
+                }
+
+                /* to fix */
+                @media (max-width:900px) {
+                    flex-direction: column;
+                    i{
+                        /* padding: 0; */
+                        margin: .3rem 0 ;
+                    }
+                    
                 }
             }
         }
@@ -386,7 +397,7 @@ button{
                 display: flex;
                 align-items: center;
                 /* gap: 1rem; */
-                /* justify-content: space-between; */
+                justify-content: center;
 
                 .small-bar{
                     background: var(--txt-color-light);
@@ -397,10 +408,18 @@ button{
                 .full-bar{
                     background: var(--txt-color-dark);
                     height: 3px;
-                    width: 100%;
+                    width: 70%;
                     margin: 0 1rem;
                 }
+
             }
+            /* @media (max-width:900px) {
+                flex-grow: 2;
+
+                .full-bar{
+                    width: 40%;
+                }
+            } */
         }
 
         .right{
