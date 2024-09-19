@@ -201,10 +201,9 @@ button{
             @media (max-width:600px) {
                 padding: 0;
                 justify-content: center;
+                transition: 800ms; 
             }
 
-            /* animation */
-            transition: 800ms; 
         }
         
     }
@@ -243,7 +242,6 @@ button{
         overflow-y: auto;
         .pl-name{
             line-height: 2.5rem;
-            /* overflow-y: scroll; */
         }
 
     }
@@ -306,12 +304,6 @@ button{
         }
     }
 
-    
-   
-
-    /* animation */
-    transition: 400ms;
-    transition-delay: 0ms;
 }
 
 /* main */
@@ -357,15 +349,12 @@ button{
         #app_main{
             z-index: 0;
             height: calc(100% - var(--app-header-height));
-            /* height: calc(100%); */
             
             /* start navabar */
             nav 
             {
                 padding: 1rem 2rem;
                 ul{
-                    /* width: 90%; */
-                    /* max-width: 1100px; */
                     margin: auto;
 
                     list-style: none;
@@ -380,7 +369,6 @@ button{
 
                         button{
                             .active{
-                                /* to fix */
                                 width: 40px;
                                 margin: .2rem auto 0;
                                 border-bottom: 2px solid var(--selected-line-color);
@@ -466,7 +454,6 @@ button{
             }
             .icons-container{
                 display: flex;
-                /* flex-wrap: wrap; */
 
                 font-size: 1.2rem;
                 margin-left: 1rem;
@@ -480,7 +467,6 @@ button{
                     margin-left: .5rem;
                     i{
                         margin: .3rem 0 ;
-                        /* padding: 0; */
                     }
                     
                 }
@@ -495,7 +481,6 @@ button{
             .center-top{
                 i{
                     padding: 0 1rem;
-                    /* font-size: larger; */
                     @media (max-width:900px) {
                         padding: 0 .3rem;
                     }
@@ -510,7 +495,6 @@ button{
                 margin-top: .5rem;
                 display: flex;
                 align-items: center;
-                /* gap: 1rem; */
                 justify-content: center;
 
                 .small-bar{
@@ -562,9 +546,6 @@ button{
             .left{
                 .song-name, .author{
                     display: none;
-                }
-                .icons-container{
-                    /* display: none; */
                 }
             }
 
