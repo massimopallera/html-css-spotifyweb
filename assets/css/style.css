@@ -146,12 +146,13 @@ button{
     width: var(--sidebar-width);
     background-color: var(--bg-dark);
     padding-top: .5rem;
-    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 
     @media (max-width: 600px){
             width: var(--sidebar-width-sm);
     }
-
     .logo{
         height: var(--app-header-height);
         .xxs-off{
@@ -160,7 +161,6 @@ button{
             padding-top: .5rem;
         }
     }
-
     /* navbar */
     .sidebar-nav{
      
@@ -203,10 +203,10 @@ button{
         }
         
     }
+
     /* playlist */
     .playlist{
-
-        /* overflow-y: scroll; */
+        flex-grow: 1;
 
         padding-left: 1rem;
         margin-top: 2rem;
@@ -234,20 +234,22 @@ button{
                 padding-left: .5rem;
             }
         }
-
+        
+        overflow-y: auto;
         .pl-name{
             line-height: 2.5rem;
-            
+            /* overflow-y: scroll; */
         }
 
     }
 
     /* sidebar bottom(account+install)*/
     .side-bottom{
-        position: absolute;
-        bottom: 0;
         width: 100%;
         padding: 0 1.25rem .5rem;
+
+        /* to keep distance between download and playlists  */
+        margin-top: .5rem;
 
         .download, .account{
             display: flex;
@@ -292,6 +294,10 @@ button{
                 margin-left: 0;
             }
         }
+
+        @media (max-width:600px) and (max-height:350px) {
+            display: none;
+        }
     }
 
     
@@ -310,7 +316,7 @@ button{
 
     .app_body{
         width: calc(100% - var(--sidebar-width));
-        overflow-y: scroll;
+        overflow-y: auto;
         background-color: var(--bg-body);
 
         /* to fix -- app-main shows an horizontal scrollbar  */
