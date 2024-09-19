@@ -5,12 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Spotify Web</title>
 
-
+    <link rel="shortcut icon" href="./assets/img/favicon.ico" type="image/x-icon">
 
     <!-- font: montserrat -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Nerko+One&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Nerko+One&display=swap"
+      rel="stylesheet"
+    />
 
     <!-- font awesome link -->
     <link
@@ -23,12 +26,13 @@
 
     <!-- css -->
     <link rel="stylesheet" href="./assets/css/style.css" />
-    <link rel="stylesheet" href="./assets/css/animations.css" />
   </head>
   <body class="">
     
     <div id="top">
+      <!-- sidebar -->
       <div id="sidebar">
+        <!-- when sidebar change width, logo and icons in nav stay on top -->
         <div>
           <!-- logo -->
           <div class="logo px-l-5">
@@ -37,6 +41,7 @@
               <img src="./assets/img/logo-small.svg" alt="" class="xxs-on" />
             </a>
           </div>
+          <!-- /. -->
 
           <!-- side-bar nav -->
           <nav class="sidebar-nav">
@@ -67,6 +72,7 @@
               </li>
             </ul>
           </nav>
+          <!-- /. -->
         </div>
 
         <!-- playlists -->
@@ -106,6 +112,7 @@
             </ul>
           </div>
         </div>
+        <!-- /. -->
 
         <!-- account -->
         <div class="side-bottom">
@@ -119,15 +126,21 @@
             <div class="xxs-off account-name">John Doe</div>
           </div>
         </div>
+        <!-- /. -->
       </div>
+      <!-- /.sidebar -->
 
+      <!-- body -->
       <div class="app_body">
+        <!-- header -->
         <div id="app_header">
           <div id="upgrade">
             <button class="txt-light uppercase">Effettua l'upgrade</button>
           </div>
         </div>
+        <!-- /. -->
 
+        <!-- main -->
         <div id="app_main">
           <!-- start app navbar -->
           <nav>
@@ -353,10 +366,13 @@
             </div>
           </div>
         </div>
+        <!-- /main-->
       </div>
+      <!-- /body -->
     </div>
 
     <div id="bottom">
+        <!-- player -->
       <div id="player">
         <!-- left -->
         <div class="left">
@@ -383,6 +399,7 @@
             <i class="fa-regular fa-folder"></i>
           </div>
         </div>
+        <!-- /. -->
 
         <!-- center -->
         <div class="center">
@@ -410,6 +427,7 @@
             <span class="txt-light">3:26</span>
           </div>
         </div>
+        <!-- /. -->
 
         <!-- right -->
         <div class="right">
@@ -425,9 +443,10 @@
               <i class="fa-solid fa-circle xs-off"></i>
             </div>
           </div>
-
         </div>
+        <!-- /. -->
       </div>
+      <!-- /player -->
     </div>
   </body>
 </html>

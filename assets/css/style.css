@@ -514,6 +514,7 @@ button{
                     background: var(--txt-color-light);
                     width: 30%;
                     height: 100%;
+                    
                 }
 
                 .full-bar{
@@ -580,6 +581,88 @@ button{
     }
 
 }
+
+
+
+/* ANIMATIONS */
+#app_main .card{
+
+    /* blocks when hover an album/song in main */
+    .img-container-hover{
+        position: relative;
+        img{
+            display: block;
+        }
+    }
+    .dark{
+                width: 100%;
+        
+        height: 100%;
+        background: #000000a9;
+        display: none;
+        
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+    .play{
+        display: none;
+        font-size: 3rem;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        color: white;
+    }
+
+    .img-container-hover:hover {
+        .dark{    
+            cursor: pointer;
+        }
+        .dark, .play{
+            display: block;
+        }
+    }
+}
+
+button:hover,
+.create-pl:hover *,
+.download:hover,
+.sidebar-nav a:hover,
+#bottom i:hover{
+    color: var(--txt-color-light);
+    cursor: pointer;
+}
+
+#upgrade button:hover{
+    transform: scale(1.04);
+    transition-duration: 700ms;
+}
+
+#bottom i.play:hover{
+    transform: scale(1.1);
+    transition-duration: 300ms;
+}
+
+#bottom
+{
+    .full-bar:hover{
+
+        cursor: pointer;
+        .fa-circle{
+            display: block;
+        }
+        .small-bar:hover{
+            background: var(--selected-line-color)!important;
+            > *{
+                color: var(--txt-color-light)!important;
+            }
+        }
+    }
+}
+
+
+
 
 
 
