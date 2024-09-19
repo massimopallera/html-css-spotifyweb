@@ -444,7 +444,7 @@ button{
 
             }
             .song-name{
-                font-weight: 900;
+                font-weight: 700;
                 font-size: 1rem;
 
                 padding-right: 3rem;
@@ -455,6 +455,11 @@ button{
             .author{
                 font-size: .8rem;
                 font-weight: 400;
+                &:hover{
+                    color: var(--txt-color-light);
+                    text-decoration: underline;
+                    cursor: pointer;
+                }
             }
             .icons-container{
                 display: flex;
@@ -549,7 +554,29 @@ button{
                 
             }
         }
-        
+        @media (max-width:450px) {
+            .left{
+                .song-name, .author{
+                    display: none;
+                }
+                .icons-container{
+                    /* display: none; */
+                }
+            }
+
+            .center{
+                .fa-shuffle,.fa-repeat{
+                    display: none;
+                }
+                .center-bottom span{
+                    display: none;
+                }
+                .center-botto .full-bar{
+                    width: 100%;
+                }
+            }
+            
+        }
     }
 
 }

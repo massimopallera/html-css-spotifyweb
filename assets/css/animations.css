@@ -40,7 +40,7 @@
 
 button:hover,
 .create-pl:hover *,
-.download:hover div,
+.download:hover,
 .sidebar-nav a:hover,
 #bottom i:hover{
     color: var(--txt-color-light);
