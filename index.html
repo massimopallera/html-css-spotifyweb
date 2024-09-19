@@ -1,414 +1,436 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Spotify Web</title>
-    
 
     <!-- font awesome link -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+      integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
 
     <!-- css -->
-    <link rel="stylesheet" href="./assets/css/style.css">
-    <link rel="stylesheet" href="./assets/css/animations.css">
-</head>
-<body class="">
-
+    <link rel="stylesheet" href="./assets/css/style.css" />
+    <link rel="stylesheet" href="./assets/css/animations.css" />
+  </head>
+  <body class="">
     <!--
-    ADD SCROLLBAR IN PLAYLIST SECTION 
-    ADD LEFT-SIDEBAR-SECTION ANIMATIONS TO SONG-NAME + AUTHOR
-    FIX 600PX ACCOUNT SECTION: FIXED
+    ADD SCROLLBAR IN PLAYLIST SECTION: fixed(?) 
+    ADD LEFT-SIDEBAR-SECTION ANIMATIONS TO SONG-NAME + AUTHOR: fixed
+    FIX 600PX ACCOUNT SECTION: fixed
+    create a breakpoint for 450px
+        - left → remove folder+song-name+like(?)
+        - center → remove shuffle+repeat
+        - right → other-devices and queue flex:column(?)
     TO ADD: FONT
      -->
 
     <div id="top">
-        <div id="sidebar">
-            <div>
+      <div id="sidebar">
+        <div>
+          <!-- logo -->
+          <div class="logo px-l-5">
+            <a href="">
+              <img src="./assets/img/logo.svg" alt="" class="xxs-off" />
+              <img src="./assets/img/logo-small.svg" alt="" class="xxs-on" />
+            </a>
+          </div>
 
-            <!-- logo -->
-             <div class="logo px-l-5">
-                <a href="">
-                    <img src="./assets/img/logo.svg" alt="" class="xxs-off">
-                    <img src="./assets/img/logo-small.svg" alt="" class="xxs-on">
+          <!-- side-bar nav -->
+          <nav class="sidebar-nav">
+            <ul>
+              <li>
+                <a class="txt-light txt-d-none" href="">
+                  <span class="sidebar-nav-item active">
+                    <img src="./assets/img/home.svg" alt="" />
+                    <span class="xxs-off">Home</span>
+                  </span>
                 </a>
-             </div>
-
-            <!-- side-bar nav -->             
-            <nav class="sidebar-nav">
-                <ul>
-                    <li>
-                        <a class="txt-light txt-d-none" href="">
-                            <span class="sidebar-nav-item active">
-                                <img src="./assets/img/home.svg" alt="">
-                                <span class="xxs-off">Home</span>
-                            </span>
-                        </a>
-                    </li>
-                    <li>
-                        <a class="txt-dark txt-d-none" href="">
-                            <span class="sidebar-nav-item">
-                                <img src="./assets/img/search.svg" alt="">
-                                <span class="xxs-off">Cerca</span>
-                            </span>
-                        </a>
-                    </li>
-                    <li>
-                        <a class="txt-dark txt-d-none" href="">
-                            <span class="sidebar-nav-item">
-                                <img src="./assets/img/libreria.svg" alt="">
-                                <span class="xxs-off">La tua libreria</span>
-                            </span>
-                        </a>
-                    </li>
-                    
-                </ul>
-            </nav>
+              </li>
+              <li>
+                <a class="txt-dark txt-d-none" href="">
+                  <span class="sidebar-nav-item">
+                    <img src="./assets/img/search.svg" alt="" />
+                    <span class="xxs-off">Cerca</span>
+                  </span>
+                </a>
+              </li>
+              <li>
+                <a class="txt-dark txt-d-none" href="">
+                  <span class="sidebar-nav-item">
+                    <img src="./assets/img/libreria.svg" alt="" />
+                    <span class="xxs-off">La tua libreria</span>
+                  </span>
+                </a>
+              </li>
+            </ul>
+          </nav>
         </div>
 
-            <!-- playlists -->
-             <div class="playlist">
-                <!-- title -->
-                 <div class="title uppercase txt-light">Playlist</div>
-                <!-- create playlist -->
-                 <div class="create-pl ">
-                    <!-- <img src="" alt="creapl"> -->
-                    <i class="fa-solid fa-square-plus" ></i>
-                    <span>Crea Playlist</span>
-                 </div>
-                <!-- playlist name -->
-                 <div class="pl-name">
-                    <ul>
-                        <li>
-                            <button class="txt-dark">
-                                Nome Playlist
-                            </button>
-                        </li>
-                        <li>
-                            <button class="txt-dark">
-                                Nome Playlist
-                            </button>
-                        </li>
-                        <li>
-                            <button class="txt-dark">
-                                Nome Playlist
-                            </button>
-                        </li>
-                        <li>
-                            <button class="txt-dark">
-                                Nome Playlist
-                            </button>
-                        </li>
-                        <li>
-                            <button class="txt-dark">
-                                Nome Playlist
-                            </button>
-                        </li>
-                        <li>
-                            <button class="txt-dark">
-                                Nome Playlist
-                            </button>
-                        </li>
-                        <li>
-                            <button class="txt-dark">
-                                Nome Playlist
-                            </button>
-                        </li>
-                    </ul>
-                 </div>
-             </div>
+        <!-- playlists -->
+        <div class="playlist">
+          <!-- title -->
+          <div class="title uppercase txt-light">Playlist</div>
+          <!-- create playlist -->
+          <div class="create-pl">
+            <!-- <img src="" alt="creapl"> -->
+            <i class="fa-solid fa-square-plus"></i>
+            <span>Crea Playlist</span>
+          </div>
+          <!-- playlist name -->
+          <div class="pl-name">
+            <ul>
+              <li>
+                <button class="txt-dark">Nome Playlist</button>
+              </li>
+              <li>
+                <button class="txt-dark">Nome Playlist</button>
+              </li>
+              <li>
+                <button class="txt-dark">Nome Playlist</button>
+              </li>
+              <li>
+                <button class="txt-dark">Nome Playlist</button>
+              </li>
+              <li>
+                <button class="txt-dark">Nome Playlist</button>
+              </li>
+              <li>
+                <button class="txt-dark">Nome Playlist</button>
+              </li>
+              <li>
+                <button class="txt-dark">Nome Playlist</button>
+              </li>
+            </ul>
+          </div>
+        </div>
 
-             <!-- account -->
-              <div class="side-bottom">
+        <!-- account -->
+        <div class="side-bottom">
+          <div class="download">
+            <i class="fa-regular fa-circle-down"></i>
+            <div class="xxs-off">Installa app</div>
+          </div>
+          <hr class="xxs-off" />
+          <div class="account">
+            <img class="rounded" src="./assets/img/profile.svg" alt="" />
+            <div class="xxs-off account-name">John Doe</div>
+          </div>
+        </div>
+      </div>
 
-                <div class="download">
-                    <i class="fa-regular fa-circle-down"></i>
-                    <div class="xxs-off">Installa app</div>
-                </div>
-                <hr class="xxs-off">
-                <div class="account">
-                    <img class="rounded" src="./assets/img/profile.svg" alt="">
-                    <div class="xxs-off account-name">John Doe</div>
+      <div class="app_body">
+        <div id="app_header">
+          <div id="upgrade">
+            <button class="txt-light uppercase">Effettua l'upgrade</button>
+          </div>
+        </div>
+
+        <div id="app_main">
+          <!-- start app navbar -->
+          <nav>
+            <ul>
+              <li>
+                <button class="txt-dark uppercase">
+                  in evidenza
+                  <hr class="active" />
+                </button>
+              </li>
+              <li>
+                <button class="txt-dark uppercase">podcast</button>
+              </li>
+              <li>
+                <button class="txt-dark uppercase">classifiche</button>
+              </li>
+              <li>
+                <button class="txt-dark uppercase">generi e mood</button>
+              </li>
+              <li>
+                <button class="txt-dark uppercase">nuove uscite</button>
+              </li>
+              <li>
+                <button class="txt-dark uppercase">scopri</button>
+              </li>
+            </ul>
+          </nav>
+          <!-- end app navbar -->
+
+          <!-- Recently played -->
+          <div class="container">
+            <h2 class="txt-light mt-2">Recently played</h2>
+            <div class="row p-1">
+              <div class="col-2 col-3-sm col-6-xs">
+                <div class="card p-5">
+                  <div class="img-container-hover">
+                    <img
+                      class="played-img"
+                      src="./assets/img/metal_lifting.jpg"
+                      alt=""
+                    />
+                    <div class="dark">
+                      <i class="fa-regular fa-play-circle play"></i>
+                    </div>
+                  </div>
+                  <div class="played-title txt-light">Heavy Metal</div>
+                  <div class="played-subtitle">Subtitle</div>
                 </div>
               </div>
-        </div>
 
-
-        <div class="app_body">
-            <div id="app_header">
-                <div id="upgrade">
-                    <button class="txt-light uppercase">
-                        Effettua l'upgrade
-                    </button>
-                </div>
-            </div>
-            
-            <div id="app_main">
-                <!-- start app navbar -->
-                <nav>
-                    <ul>
-                        <li>
-                            <button class="txt-dark uppercase">
-                                in evidenza
-                                <hr class="active">
-                            </button>
-                        </li>
-                        <li>
-                            <button class="txt-dark uppercase">
-                                podcast
-                            </button>
-                        </li>
-                        <li>
-                            <button class="txt-dark uppercase">
-                                classifiche
-                            </button>
-                        </li>
-                        <li>
-                            <button class="txt-dark uppercase">
-                                generi e mood
-                            </button>
-                        </li>
-                        <li>
-                            <button class="txt-dark uppercase">
-                                nuove uscite
-                            </button>
-                        </li>
-                        <li>
-                            <button class="txt-dark uppercase">
-                                scopri
-                            </button>
-                        </li>
-                    </ul>
-                </nav>
-                <!-- end app navbar -->
-
-                <!-- Recently played -->
-                <div class="container">
-                    <h2 class="txt-light mt-2">Recently played</h2>
-                    <div class="row p-1">
-                        <div class="col-2 col-3-sm col-6-xs">
-                            <div class="card p-5">
-                                <div class="img-container-hover">
-                                    <img class="played-img" src="./assets/img/metal_lifting.jpg" alt="">
-                                    <div class="dark">
-                                        <i class="fa-regular fa-play-circle play"></i>
-                                    </div>                                
-                                </div>
-                                <div class="played-title txt-light">Heavy Metal</div>
-                                <div class="played-subtitle">Subtitle</div>
-                            </div>
-                        </div>
-
-                        <div class="col-2 col-3-sm col-6-xs">
-                            <div class="card p-5">
-                                <div class="img-container-hover">
-                                    <img class="played-img" src="./assets/img/stranger.jpeg" alt="">
-                                    <div class="dark">
-                                        <i class="fa-regular fa-play-circle play"></i>
-                                    </div>
-                                </div>
-                                <div class="played-title txt-light">Stranger things, Vol. 1 (a Netflix Original Series Soundtracks)</div>
-                                <div class="played-subtitle">Kyle Dixon & Michael Stein</div>
-                            </div>
-                        </div>
-
-                        <div class="col-2 col-3-sm col-6-xs">
-                            <div class="card p-5">
-                                <div class="img-container-hover">
-                                    <img class="played-img" src="./assets/img/aquietplace.jpeg" alt="">
-                                    <div class="dark">
-                                        <i class="fa-regular fa-play-circle play"></i>
-                                    </div>                                
-                                </div>
-                                <div class="played-title txt-light">A quiet place</div>
-                                <div class="played-subtitle">Subtitle</div>
-                            </div>
-                        </div>
-
-                        <div class="col-2 col-3-sm col-6-xs">
-                            <div class="card p-5">
-                                <div class="img-container-hover">
-                                    <img class="played-img" src="./assets/img/split.jpeg" alt="">
-                                    <div class="dark">
-                                        <i class="fa-regular fa-play-circle play"></i>
-                                    </div>                                
-                                </div>
-                                <div class="played-title txt-light">Split</div>
-                                <div class="played-subtitle">Subtitle</div>
-                            </div>
-                        </div>
-                        <div class="col-2 col-3-sm col-6-xs">
-                            <div class="card p-5">
-                                <div class="img-container-hover">
-                                    <img class="played-img" src="./assets/img/cure.jpeg" alt="">
-                                    <div class="dark">
-                                        <i class="fa-regular fa-play-circle play"></i>
-                                    </div>                                
-                                </div>
-                                <div class="played-title txt-light">A cure for wellness</div>
-                                <div class="played-subtitle">Subtitle</div>
-                            </div>
-                        </div>
-
-                        <div class="col-2 col-3-sm col-6-xs">
-                            <div class="card p-5">
-                                <div class="img-container-hover">
-                                    <img class="played-img" src="./assets/img/sinister.jpeg" alt="">
-                                    <div class="dark">
-                                        <i class="fa-regular fa-play-circle play"></i>
-                                    </div>                                
-                                </div>    
-                                <div class="played-title txt-light">Sinister</div>
-                                <div class="played-subtitle">Subtitle</div>
-                            </div>
-                        </div>
+              <div class="col-2 col-3-sm col-6-xs">
+                <div class="card p-5">
+                  <div class="img-container-hover">
+                    <img
+                      class="played-img"
+                      src="./assets/img/stranger.jpeg"
+                      alt=""
+                    />
+                    <div class="dark">
+                      <i class="fa-regular fa-play-circle play"></i>
                     </div>
+                  </div>
+                  <div class="played-title txt-light">
+                    Stranger things, Vol. 1 (a Netflix Original Series
+                    Soundtracks)
+                  </div>
+                  <div class="played-subtitle">Kyle Dixon & Michael Stein</div>
                 </div>
+              </div>
 
-                <!-- Created for -->
-                <div class="container">
-                    <h2 class="txt-light mt-2 mb-1">Creato per John Doe</h2>
-                    <h4>Pi&ugrave; ascolti, pi&ugrave; accurati saranno i suggerimenti</h4>
-                    <div class="row p-1">
-                        <div class="col-2 col-3-sm col-6-xs">
-                            <div class="card p-5">
-                                <div class="img-container-hover">
-                                    <img class="played-img" src="./assets/img/radar.jpeg" alt="">
-                                    <div class="dark">
-                                        <i class="fa-regular fa-play-circle play"></i>
-                                    </div>                                
-                                </div>
-                                <div class="played-title txt-light">Release Radar</div>
-                                <!-- <div class="played-subtitle">Subtitle</div> -->
-                            </div>
-                        </div>
-
-                        <div class="col-2 col-3-sm col-6-xs">
-                            <div class="card p-5">
-                                <div class="img-container-hover">
-                                    <img class="played-img" src="./assets/img/mixdaily.jpeg" alt="">
-                                    <div class="dark">
-                                        <i class="fa-regular fa-play-circle play"></i>
-                                    </div>
-                                </div>
-                                <div class="played-title txt-light">Daily Mix 1</div>
-                                <!-- <div class="played-subtitle">Kyle Dixon & Michael Stein</div> -->
-                            </div>
-                        </div>
+              <div class="col-2 col-3-sm col-6-xs">
+                <div class="card p-5">
+                  <div class="img-container-hover">
+                    <img
+                      class="played-img"
+                      src="./assets/img/aquietplace.jpeg"
+                      alt=""
+                    />
+                    <div class="dark">
+                      <i class="fa-regular fa-play-circle play"></i>
                     </div>
+                  </div>
+                  <div class="played-title txt-light">A quiet place</div>
+                  <div class="played-subtitle">Subtitle</div>
                 </div>
+              </div>
 
-                <!-- Popular artist -->
-                <div class="container">
-                    <h2 class="txt-light mt-2">Artisti pi&ugrave; popolari</h2>
-                    <h4>Pi&ugrave; ascolti, pi&ugrave; accurati saranno i suggerimenti</h4>
-                    <div class="row p-1">
-                        <div class="col-2 col-3-sm col-6-xs">
-                            <div class="card p-5">
-                                <div class="img-container-hover ">
-                                    <img class="played-img rounded" src="./assets/img/youg.jpeg" alt="">
-                                    <div class="dark rounded">
-                                        <i class="fa-regular fa-play-circle play"></i>
-                                    </div>                                
-                                </div>
-                                <div class="played-title txt-light"></div>
-                                <!-- <div class="played-subtitle">Subtitle</div> -->
-                            </div>
-                        </div>
-
-                        <div class="col-2 col-3-sm col-6-xs">
-                            <div class="card p-5">
-                                <div class="img-container-hover ">
-                                    <img class="played-img  rounded" src="./assets/img/einaudi.jpeg" alt="">
-                                    <div class="dark rounded">
-                                        <i class="fa-regular fa-play-circle play"></i>
-                                    </div>
-                                </div>
-                                <div class="played-title txt-light">Einaudi</div>
-                                <!-- <div class="played-subtitle">Kyle Dixon & Michael Stein</div> -->
-                            </div>
-                        </div>
-
-                       
-                        </div>
+              <div class="col-2 col-3-sm col-6-xs">
+                <div class="card p-5">
+                  <div class="img-container-hover">
+                    <img
+                      class="played-img"
+                      src="./assets/img/split.jpeg"
+                      alt=""
+                    />
+                    <div class="dark">
+                      <i class="fa-regular fa-play-circle play"></i>
+                    </div>
+                  </div>
+                  <div class="played-title txt-light">Split</div>
+                  <div class="played-subtitle">Subtitle</div>
                 </div>
+              </div>
+              <div class="col-2 col-3-sm col-6-xs">
+                <div class="card p-5">
+                  <div class="img-container-hover">
+                    <img
+                      class="played-img"
+                      src="./assets/img/cure.jpeg"
+                      alt=""
+                    />
+                    <div class="dark">
+                      <i class="fa-regular fa-play-circle play"></i>
+                    </div>
+                  </div>
+                  <div class="played-title txt-light">A cure for wellness</div>
+                  <div class="played-subtitle">Subtitle</div>
+                </div>
+              </div>
+
+              <div class="col-2 col-3-sm col-6-xs">
+                <div class="card p-5">
+                  <div class="img-container-hover">
+                    <img
+                      class="played-img"
+                      src="./assets/img/sinister.jpeg"
+                      alt=""
+                    />
+                    <div class="dark">
+                      <i class="fa-regular fa-play-circle play"></i>
+                    </div>
+                  </div>
+                  <div class="played-title txt-light">Sinister</div>
+                  <div class="played-subtitle">Subtitle</div>
+                </div>
+              </div>
             </div>
+          </div>
+
+          <!-- Created for -->
+          <div class="container">
+            <h2 class="txt-light mt-2 mb-1">Creato per John Doe</h2>
+            <h4>
+              Pi&ugrave; ascolti, pi&ugrave; accurati saranno i suggerimenti
+            </h4>
+            <div class="row p-1">
+              <div class="col-2 col-3-sm col-6-xs">
+                <div class="card p-5">
+                  <div class="img-container-hover">
+                    <img
+                      class="played-img"
+                      src="./assets/img/radar.jpeg"
+                      alt=""
+                    />
+                    <div class="dark">
+                      <i class="fa-regular fa-play-circle play"></i>
+                    </div>
+                  </div>
+                  <div class="played-title txt-light">Release Radar</div>
+                  <!-- <div class="played-subtitle">Subtitle</div> -->
+                </div>
+              </div>
+
+              <div class="col-2 col-3-sm col-6-xs">
+                <div class="card p-5">
+                  <div class="img-container-hover">
+                    <img
+                      class="played-img"
+                      src="./assets/img/mixdaily.jpeg"
+                      alt=""
+                    />
+                    <div class="dark">
+                      <i class="fa-regular fa-play-circle play"></i>
+                    </div>
+                  </div>
+                  <div class="played-title txt-light">Daily Mix 1</div>
+                  <!-- <div class="played-subtitle">Kyle Dixon & Michael Stein</div> -->
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Popular artist -->
+          <div class="container">
+            <h2 class="txt-light mt-2">Artisti pi&ugrave; popolari</h2>
+            <h4>
+              Pi&ugrave; ascolti, pi&ugrave; accurati saranno i suggerimenti
+            </h4>
+            <div class="row p-1">
+              <div class="col-2 col-3-sm col-6-xs">
+                <div class="card p-5">
+                  <div class="img-container-hover">
+                    <img
+                      class="played-img rounded"
+                      src="./assets/img/youg.jpeg"
+                      alt=""
+                    />
+                    <div class="dark rounded">
+                      <i class="fa-regular fa-play-circle play"></i>
+                    </div>
+                  </div>
+                  <div class="played-title txt-light"></div>
+                  <!-- <div class="played-subtitle">Subtitle</div> -->
+                </div>
+              </div>
+
+              <div class="col-2 col-3-sm col-6-xs">
+                <div class="card p-5">
+                  <div class="img-container-hover">
+                    <img
+                      class="played-img rounded"
+                      src="./assets/img/einaudi.jpeg"
+                      alt=""
+                    />
+                    <div class="dark rounded">
+                      <i class="fa-regular fa-play-circle play"></i>
+                    </div>
+                  </div>
+                  <div class="played-title txt-light">Einaudi</div>
+                  <!-- <div class="played-subtitle">Kyle Dixon & Michael Stein</div> -->
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
+      </div>
     </div>
 
     <div id="bottom">
-        <div id="player">
-            <!-- left -->
-            <div class="left">
-                <!-- <div class="d-flex"> -->
-                    <!-- song-cover -->
-                     <div class="img-container">
-                         <img src="./assets/img/player_left.jpg" alt="">
-                     </div>`
-                     <!-- <span> -->
-                        <div>
-                            <!-- song-name -->
-                            <div class="song-name txt-light">Sinister</div>
-                            <!-- song-author -->
-                            <div class="author">Brano Nome</div>
-                        </div>
-                     <!-- </span> -->
-                <!-- </div> -->
+      <div id="player">
+        <!-- left -->
+        <div class="left">
+          <!-- <div class="d-flex"> -->
+          <!-- song-cover -->
+          <div class="img-container">
+            <img src="./assets/img/player_left.jpg" alt="" />
+          </div>
+          `
+          <!-- <span> -->
+          <div>
+            <!-- song-name -->
+            <div class="song-name txt-light">Sinister</div>
+            <!-- song-author -->
+            <div class="author">Brano Nome</div>
+          </div>
+          <!-- </span> -->
+          <!-- </div> -->
 
-                <div class="icons-container">
-                    <!-- like -->
-                     <i class="fa-regular fa-heart"></i>
-                     <!-- folder -->
-                     <i class="fa-regular fa-folder"></i>
-                </div>
-            </div>
-
-            <!-- center -->
-            <div class="center">
-                <div class="center-top ">
-                    <!-- shuffle -->
-                    <i class="fa-solid fa-shuffle txt-light"></i>
-                    <!-- previous -->
-                    <i class="fa-solid fa-backward-step txt-light"></i>
-                    <!-- play -->
-                    <i class="fa-regular fa-play-circle play txt-light"></i>
-                    <!-- next -->
-                    <i class="fa-solid fa-forward-step txt-light"></i>
-                    <!-- repeat -->
-                    <i class="fa-solid fa-repeat txt-light"></i>
-                </div>
-
-                <!-- progress bar + times -->
-                <div class="center-bottom">
-                    <span class="txt-light">0:25</span>
-                    <div class="full-bar">
-                        <div class="small-bar">
-                            <i class="fa-solid fa-circle"></i>
-                        </div>
-                    </div>
-                    <span class="txt-light">3:26</span>
-                </div>
-            </div>
-
-            <!-- right -->
-            <div class="right">
-                <!-- queue -->
-                <i class="fa-solid fa-bars"></i>
-                <!-- other-devices -->
-                <i class="fa-solid fa-display"></i>
-                <!-- volume icon + volume bar -->
-                <i class="fa-solid fa-volume-low"></i>
-
-                <div class="full-bar xs-off">
-                    <div class="small-bar xs-off">
-                        <i class="fa-solid fa-circle xs-off"></i>
-                    </div>
-                </div>
-            </div>
+          <div class="icons-container">
+            <!-- like -->
+            <i class="fa-regular fa-heart"></i>
+            <!-- folder -->
+            <i class="fa-regular fa-folder"></i>
+          </div>
         </div>
+
+        <!-- center -->
+        <div class="center">
+          <div class="center-top">
+            <!-- shuffle -->
+            <i class="fa-solid fa-shuffle txt-light"></i>
+            <!-- previous -->
+            <i class="fa-solid fa-backward-step txt-light"></i>
+            <!-- play -->
+            <i class="fa-regular fa-play-circle play txt-light"></i>
+            <!-- next -->
+            <i class="fa-solid fa-forward-step txt-light"></i>
+            <!-- repeat -->
+            <i class="fa-solid fa-repeat txt-light"></i>
+          </div>
+
+          <!-- progress bar + times -->
+          <div class="center-bottom">
+            <span class="txt-light">0:25</span>
+            <div class="full-bar">
+              <div class="small-bar">
+                <i class="fa-solid fa-circle"></i>
+              </div>
+            </div>
+            <span class="txt-light">3:26</span>
+          </div>
+        </div>
+
+        <!-- right -->
+        <div class="right">
+          <!-- queue -->
+          <i class="fa-solid fa-bars"></i>
+          <!-- other-devices -->
+          <i class="fa-solid fa-display"></i>
+          <!-- volume icon + volume bar -->
+          <i class="fa-solid fa-volume-low"></i>
+
+          <div class="full-bar xs-off">
+            <div class="small-bar xs-off">
+              <i class="fa-solid fa-circle xs-off"></i>
+            </div>
+          </div>
+
+        </div>
+      </div>
     </div>
-
-
-
-</body>
+  </body>
 </html>

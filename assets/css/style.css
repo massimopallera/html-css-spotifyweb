@@ -115,10 +115,12 @@ button{
     position: relative;
 }
 .fa-circle{
+    font-size: small;
+
     position: absolute;
     right: 0;
     top: 0;
-    transform: translate(50%,-25%);
+    transform: translate(50%,-30%);
     display: none;
 }
 .p-5{
