@@ -58,17 +58,6 @@ button:hover,
     transition-duration: 300ms;
 }
 
-.small-bar{
-    position: relative;
-}
-
-.fa-circle{
-    position: absolute;
-    right: 0;
-    top: 0;
-    transform: translate(50%,-25%);
-    display: none;
-}
 .full-bar:hover{
     .fa-circle{
         display: block;

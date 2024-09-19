@@ -1,9 +1,10 @@
+
+/* #region common */
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
-
 body{
     height: 100vh;
     overflow: hidden;
@@ -13,7 +14,10 @@ body{
 img{
     max-width: 100%;
 }
-
+button{
+    background: transparent;
+    border: 0;
+}
 :root{
     --app-header-height: 80px;
     --player-height: 80px;
@@ -29,6 +33,8 @@ img{
     --bg-body: #141922;
     --bg-player: #282828;
 }
+/* #endregion common */
+
 
 /* #region debug */
 .debug *{
@@ -86,7 +92,6 @@ img{
     width: 95%;
     margin: auto;
 }
-
 .row{
     display: flex;
     flex-wrap: wrap;
@@ -94,26 +99,31 @@ img{
     margin: 0 -1rem;
     padding: 1rem;    
 }
-
 .col-2{
     width: calc((100% / 12) *2);
 }
-
 .txt-light{
     color: var(--txt-color-light);
 }
 .txt-dark{
     color: var(--txt-color-dark);
 }
-
 .txt-d-none{
     text-decoration: none;
 }
-
+.small-bar{
+    position: relative;
+}
+.fa-circle{
+    position: absolute;
+    right: 0;
+    top: 0;
+    transform: translate(50%,-25%);
+    display: none;
+}
 .p-5{
     padding: .5rem;
 }
-
 .mt-2{
     margin-top: 2rem;
 }
@@ -123,24 +133,15 @@ img{
 .rounded{
     border-radius: 50%;
 }
-
 .xxs-on{
     display: none;
 }
-/* .xs-off{
-    display: block;
-} */
 .uppercase{
     text-transform: uppercase;
 }
-button{
-    background: transparent;
-    border: 0;
-    /* color: var(--txt-color-dark); */
-}
 
 
-
+/* sidebar */
 #sidebar{
     width: var(--sidebar-width);
     background-color: var(--bg-dark);
@@ -200,6 +201,7 @@ button{
             /* animation */
             transition: 800ms; 
         }
+        
     }
     /* playlist */
     .playlist{
@@ -240,47 +242,60 @@ button{
 
     }
 
-
-    /* account */
+    /* sidebar bottom(account+install)*/
     .side-bottom{
         position: absolute;
         bottom: 0;
         width: 100%;
         padding: 0 1.25rem .5rem;
 
-    }
-    .download, .account{
-        display: flex;
-        justify-content: left;
-        align-items: center;
-    }
-    .download{
-        
-        margin-left: .5rem;
-        margin-bottom: .5rem;
-        div{
+        .download, .account{
+            display: flex;
+            justify-content: left;
+            align-items: center;
+        }
+        .download{
+            
             margin-left: .5rem;
+            margin-bottom: .5rem;
+            div{
+                margin-left: .5rem;
+            }
+        }
+        .account{
+            margin-top: .5rem;
+            margin-bottom: .5rem;
+            img{
+                padding: .3rem;
+                width: 40px;
+                aspect-ratio: 1;
+                background: var(--bg-player);
+            }
+            .account-name{
+                margin-left: .5rem;
+                color: white;
+                font-weight: 900
+            }
+        }
+        hr{
+            width: 100%;
+            margin: auto;
+            border: 1px solid var(--txt-color-dark);
+        }
+
+        @media (max-width:600px) {
+            display: flex;
+            flex-direction: column;
+            padding: 0;
+            align-items: center;
+            .download{
+                margin-left: 0;
+            }
         }
     }
-    .account{
-        margin-top: .5rem;
-        img{
-            padding: .3rem;
-            width: 40px;
-            aspect-ratio: 1;
-            background: var(--bg-player);
-        }
-        .account-name{
-            margin-left: .5rem;
-            color: white;
-            font-weight: 900
-        }
-    }
-    hr{
-        width: 100%;
-        margin: auto;
-        border: 1px solid var(--txt-color-dark);
-    }
+
+    
+   
 
     /* animation */
     transition: 400ms;
@@ -383,7 +398,7 @@ button{
     }
 }
 
-
+/* bottom */
 #bottom{
     .full-bar, .small-bar{
         border-radius: 2rem;
@@ -523,12 +538,17 @@ button{
 }
 
 
+
+/* MEDIA QUERY - utilities */
+
+/* sm */
 @media screen and (max-width: 1100px) {
     .col-3-sm{
         width: calc((100% / 12) * 3);
     }
 }
 
+/* xs */
 @media screen and (max-width: 700px) {
     .col-6-xs{
         width: 50%;
