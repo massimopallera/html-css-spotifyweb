@@ -398,6 +398,9 @@ button{
                 }
             }
             /* end navbar */
+            .container h4{
+                font-weight: 500;
+            }
             .card{
                 text-align: center;
                 .played-title{
