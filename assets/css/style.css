@@ -314,7 +314,7 @@ button{
 
     .app_body{
         width: calc(100% - var(--sidebar-width));
-        overflow-y: auto;
+        /* overflow-y: auto; */
         background-color: var(--bg-body);
 
         /* to fix -- app-main shows an horizontal scrollbar  */
@@ -349,6 +349,7 @@ button{
         #app_main{
             z-index: 0;
             height: calc(100% - var(--app-header-height));
+            overflow-y: auto;
             
             /* start navabar */
             nav 
@@ -385,7 +386,6 @@ button{
                     padding: .5rem;
                 }
             }
-            /* end navbar */
             .container h4{
                 font-weight: 500;
             }
